@@ -117,4 +117,32 @@ $photo = CFile::ResizeImageGet($file, array("width"=>300, "height"=>200), BX_RES
 $rsSites = CSite::GetByID("s1");
 $arSite = $rsSites->Fetch();
 ?>
+Array
+(
+    [LID] => s1
+    [SORT] => 1
+    [DEF] => Y
+    [ACTIVE] => Y
+    [NAME] => Sitename
+    [DIR] => /
+    [FORMAT_DATE] => DD.MM.YYYY
+    [FORMAT_DATETIME] => DD.MM.YYYY HH:MI:SS
+    [FORMAT_NAME] => #NAME# #LAST_NAME#
+    [WEEK_START] => 1
+    [CHARSET] => UTF-8
+    [LANGUAGE_ID] => ru
+    [DOC_ROOT] => 
+    [DOMAIN_LIMITED] => N
+    [SERVER_NAME] => 
+    [SITE_NAME] => Sitename
+    [EMAIL] => 
+    [CULTURE_ID] => 1
+    [ID] => s1
+    [length(L.DIR)] => 1
+    [ifnull(length(L.DOC_ROOT), 0)] => 0
+    [DIRECTION] => Y
+    [DOMAINS] => 
+    [ABS_DOC_ROOT] => /Users/petun/Sites/sitename
+)
+
 ```
