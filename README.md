@@ -106,6 +106,8 @@ Bitrix Helper Classes
 <?
 $file = $arResult['DISPLAY_PROPERTIES']['MORE_PHOTO']['FILE_VALUE'];
 $photo = CFile::ResizeImageGet($file, array("width"=>300, "height"=>200), BX_RESIZE_IMAGE_EXACT, false);
+
+$photo = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE'], array("width"=>553, "height"=>300), BX_RESIZE_IMAGE_EXACT, false);
 ?>
 <img src="<?=$photo['src'];?>" alt="" />
 ```
