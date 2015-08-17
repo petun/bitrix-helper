@@ -148,3 +148,15 @@ Array
 )
 
 ```
+
+
+## Usefull arItem variables
+```php
+$arItem['NAME'];
+$arItem['DISPLAY_PROPERTIES']['propName']['DISPLAY_VALUE'];
+$arItem['PREVIEW_PICTURE'];
+$arItem['PREVIEW_TEXT'];
+$arItem['~PREVIEW_TEXT']; // raw data
+
+
+```
