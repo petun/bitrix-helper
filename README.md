@@ -165,3 +165,8 @@ $arResult["DISPLAY_ACTIVE_FROM"]; // date
 
 
 ```
+
+
+## Older recording
+$APPLICATION->SetPageProperty('inner-css-class', 'delivery-page');
+$APPLICATION->ShowProperty('inner-css-class');
