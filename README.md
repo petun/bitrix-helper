@@ -158,6 +158,10 @@ $arItem['PREVIEW_PICTURE'];
 $arItem['PREVIEW_TEXT'];
 $arItem['~PREVIEW_TEXT']; // raw data
 $arItem["DETAIL_PAGE_URL"];
+$arParams["DISPLAY_PICTURE"];
+$arResult["DETAIL_PICTURE"]["SRC"];
+$arResult["DETAIL_PICTURE"]["TITLE"];
+$arResult["DISPLAY_ACTIVE_FROM"]; // date
 
 
 ```
