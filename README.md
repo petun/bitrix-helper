@@ -112,6 +112,21 @@ $photo = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE'], array("width"=>553, "
 <img src="<?=$photo['src'];?>" alt="" />
 ```
 
+## Work with blocks
+```php
+// take subcategory .. select only ID NAME and DESCRIPTION props (https://dev.1c-bitrix.ru/api_help/iblock/classes/ciblocksection/getlist.php)
+$dbList = CIBlockSection::GetList(null, array('SECTION_ID' => $section['ID']), false, array('ID','NAME', 'DESCRIPTION'));
+while ($arSect = $dbList->GetNext()) {
+	$section['SUB_SECTIONS'][] = $arSect;
+}
+
+// get items from iblock (https://dev.1c-bitrix.ru/api_help/iblock/classes/ciblockelement/getlist.php)
+$dbItemList = CIBlockElement::GetList(null, array('SECTION_ID'=> $arSect['ID'], 'IBLOCK_ID' => 11), false, false, array('ID', 'NAME','TAGS'));
+while($arItemResult = $dbItemList->GetNext()) {
+	$r['ITEMS'][] = $arItemResult;
+}
+```
+
 
 ## Site Settings
 ```php
@@ -162,8 +177,6 @@ $arParams["DISPLAY_PICTURE"];
 $arResult["DETAIL_PICTURE"]["SRC"];
 $arResult["DETAIL_PICTURE"]["TITLE"];
 $arResult["DISPLAY_ACTIVE_FROM"]; // date
-
-
 ```
 
 
